@@ -1,8 +1,8 @@
 ---
-icon: circle-info
-cover: /assets/images/cover3.jpg
+icon: user
+cover: http://images.kryiea.cn/img/20240116032259.png
 ---
 
-# 介绍页
+# 关于
 
-将你的个人介绍和档案放置在此处。
+我是你爹
