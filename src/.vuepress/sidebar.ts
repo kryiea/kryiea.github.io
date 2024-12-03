@@ -16,6 +16,13 @@ export default sidebar({
       link: "mysql/",
       children: "structure",
     },
+    {
+      text: "Docker",
+      icon: "docker",
+      prefix: "docker/",
+      link: "docker/",
+      children: "structure",
+    },
   ],
   "/front-end/": "structure",
   "/devConfig/": "structure",
