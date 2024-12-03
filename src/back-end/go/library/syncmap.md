@@ -1,6 +1,6 @@
 ---
 # 这是文章的标题
-title: Sync.Map 源码学习
+title: SyncMap 源码学习
 # 你可以自定义封面图片
 cover: 
 # 这是页面的图标
@@ -16,7 +16,6 @@ category:
   - Go
 # 一个页面可以有多个标签
 tag:
-  - 
 # 此页面会在文章列表置顶
 sticky: false
 # 此页面会出现在星标文章中
@@ -27,6 +26,7 @@ footer:
 copyright: 
 ---
 
+syncmap 源码学习
 
 <!-- more -->
 
@@ -103,7 +103,7 @@ func main() {
 }
 ```
 
-![![](staticVPhXbjMisovVoyxm6lKcNMmnnCe.png)](http://images.kryiea.cn/img/![](staticVPhXbjMisovVoyxm6lKcNMmnnCe.png).png)
+![](./static/VPhXbjMisovVoyxm6lKcNMmnnCe.png)
 
 
 **原因：fmt.Println 内部使用了锁**
@@ -120,7 +120,7 @@ func main() {
 
 **请求流程：**
 
-![![](staticWnfIbOCLXozS0hx9Sp5cqfN1ned.png)](http://images.kryiea.cn/img/![](staticWnfIbOCLXozS0hx9Sp5cqfN1ned.png).png)
+![](./static/WnfIbOCLXozS0hx9Sp5cqfN1ned.png)
 
 - 当请求访问 sync.map，会让请求在 readmap 上解决，如果无法解决再交给 dirtymap 来兜底完成。
 - dirtymap 会拥有全量的数据，因为它有兜底完成 readmap 无法处理的请求的责任。
@@ -131,7 +131,7 @@ func main() {
 
 **关于 entry：**
 
-![![](staticJOyWbE2hGo1owsxWVT6cn9tqnEf.png)](http://images.kryiea.cn/img/![](staticJOyWbE2hGo1owsxWVT6cn9tqnEf.png).png)
+![](./static/JOyWbE2hGo1owsxWVT6cn9tqnEf.png)
 
 - 最下面的 `entry` 被 read 和 dirty 同时指向，代表的是：两个 map 中相同的 key 对应同一块 value 内存，而 value 就是 sync.map 的 entry。这里会涉及到数据的双向流转机制，后面会解读。
 
@@ -242,6 +242,7 @@ func main() {
 - **readOnly：** readmap 的封装，里面有一个 amended 字段，true 就是标记 有数据在 read 没有，而 dirty 有。
 - **Entry：** 就是 value 的封装
 
+
 ```go
 //********************************************************************************
 type Map struct {
@@ -285,9 +286,8 @@ read 可以为 dirty 尽量的挡住 读、删、更新的操作流量，但是�
 
 这个流转的可以理解为：将 readmap 指针指向 dirtymap，然后 dirtymap 置为 nil。
 
-![![](staticYRaBb19T5oupivx983jcPheqnZf.png)](http://images.kryiea.cn/img/![](staticYRaBb19T5oupivx983jcPheqnZf.png).png)
-
-![![](staticEYkSbxi8BoJt4nxXheicTTPZnAe.png)](http://images.kryiea.cn/img/![](staticEYkSbxi8BoJt4nxXheicTTPZnAe.png).png)
+![](./static/YRaBb19T5oupivx983jcPheqnZf.png)
+![](./static/EYkSbxi8BoJt4nxXheicTTPZnAe.png)
 
 ### 2. Read map --> Dirty map
 
@@ -295,7 +295,7 @@ read 可以为 dirty 尽量的挡住 读、删、更新的操作流量，但是�
 
 如果这时候来了一个写（新增）请求，写请求是要通过**加锁**到 dirty 中操作的，dirty 需要保证自己的数据是全量的，就会从 readmap 中复制一份逻辑上存在（能通过 key 查询到的）的数据过来。
 
-![](http://images.kryiea.cn/img/![](staticG3jVbmBf2oFgt8xqF02cu8fznBg.png).png)
+![](./static/G3jVbmBf2oFgt8xqF02cu8fznBg.png)
 
 ### 3. 为什么要双向流转
 
@@ -332,7 +332,7 @@ type entry struct {
 
 **画个图理解一下：**
 
-![T2drbiFNcoottKxEw4HcnCPVnhd](http://images.kryiea.cn/img/T2drbiFNcoottKxEw4HcnCPVnhd.png)
+![](./static/T2drbiFNcoottKxEw4HcnCPVnhd.png)
 ### 3. Nil 状态
 
 **先说结论**：
