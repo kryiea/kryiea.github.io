@@ -7,7 +7,7 @@ export default navbar([
     text: "后端",
     link: "/back-end/README.md",
     icon: "yin-yang",
-    children: ["/back-end/go/", "/back-end/mysql/", "/back-end/docker/"],
+    children: ["/back-end/go/", "/back-end/mysql/", "/back-end/docker/","/back-end/redis/"],
   },  
 
   {

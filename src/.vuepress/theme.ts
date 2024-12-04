@@ -20,11 +20,12 @@ export default hopeTheme({
   },
 
   iconAssets: "fontawesome-with-brands",
+  //iconPrefix: "fa-brands fa-",
 
   // 导航栏左边logo
   //logo: "/logo.png",
 
-  repo: "https://github.com/kryiea",
+  repo: "https://kryiea.github.io/",
 
   docsDir: "src",
 

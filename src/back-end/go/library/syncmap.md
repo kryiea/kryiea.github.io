@@ -1,10 +1,10 @@
 ---
 # 这是文章的标题
-title: SyncMap 源码学习
+title: SyncMap包的源码学习
 # 你可以自定义封面图片
 cover: 
 # 这是页面的图标
-icon: file
+icon: 
 # 这是侧边栏的顺序
 order: 1
 # 设置作者
@@ -16,6 +16,7 @@ category:
   - Go
 # 一个页面可以有多个标签
 tag:
+ - syncMap
 # 此页面会在文章列表置顶
 sticky: false
 # 此页面会出现在星标文章中

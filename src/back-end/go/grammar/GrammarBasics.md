@@ -1,10 +1,10 @@
 ---
 # 这是文章的标题
-title: 基础语法
+title: Go基础语法
 # 你可以自定义封面图片
 cover: 
 # 这是页面的图标
-icon: file
+icon: 
 # 这是侧边栏的顺序
 order: 3
 # 设置作者

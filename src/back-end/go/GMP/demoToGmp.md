@@ -1,10 +1,10 @@
 ---
 # 这是文章的标题
-title: 理解gmp调度细节的小demo
+title: GMP模型：demo演示
 # 你可以自定义封面图片
 cover: 
 # 这是页面的图标
-icon: file
+icon: 
 # 这是侧边栏的顺序
 order: 2
 # 设置作者

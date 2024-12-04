@@ -1,10 +1,10 @@
 ---
 # 这是文章的标题
-title: MySQL 的日志系统
+title: MySQL日志系统
 # 你可以自定义封面图片
 cover: 
 # 这是页面的图标
-icon: file
+icon: 
 # 这是侧边栏的顺序
 order: 1
 # 设置作者
