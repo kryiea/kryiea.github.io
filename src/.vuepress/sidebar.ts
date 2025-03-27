@@ -9,24 +9,22 @@ export default sidebar({
       collapsible: true,
       children: [
         {
-          text: "基础",
-          icon: "fa-solid fa-bars",
+          text: "语言基础",
+          icon: "fa-solid fa-code",
           prefix: "grammar/",
           children: [
             "GrammarBasics",
           ],
         },
         {
-          text: "数据类型",
-          icon: "fa-solid fa-bars",
+          text: "数据结构",
+          icon: "fa-solid fa-database",
           prefix: "datastruct/",
-          children: [
-
-          ],
+          children: [],
         },
         {
-          text: "进阶",
-          icon: "fa-solid fa-bars",
+          text: "高级特性",
+          icon: "fa-solid fa-rocket",
           prefix: "feature/",
           children: [
             "memoryEscape",
@@ -35,8 +33,8 @@ export default sidebar({
           ],
         },
         {
-          text: "GMP模型",
-          icon: "fa-solid fa-bars",
+          text: "并发编程",
+          icon: "fa-solid fa-network-wired",
           prefix: "GMP/",
           children: [
             "gmp",
@@ -44,26 +42,26 @@ export default sidebar({
           ],
         },
         {
-          text: "库源码",
-          icon: "fa-solid fa-bars",
+          text: "标准库",
+          icon: "fa-solid fa-book",
           prefix: "library/",
           children: [
             "jsonPackage",
             "syncmap",
+            "strings",
           ],
         },
-
       ],
     },
     {
-      text: "Mysql",
-      icon: "database",
+      text: "MySQL",
+      icon: "fa-solid fa-database",
       prefix: "mysql/",
       collapsible: true,
       children: [
         {
-          text: "基础",
-          icon: "fa-solid fa-bars",
+          text: "基础概念",
+          icon: "fa-solid fa-layer-group",
           prefix: "basis/",
           children: [
             "log",
@@ -71,7 +69,6 @@ export default sidebar({
         },
       ],
     },
-
     {
       text: "Docker",
       icon: "fa-brands fa-docker",
@@ -79,28 +76,61 @@ export default sidebar({
       collapsible: true,
       children: "structure",
     },
-
-
     {
       text: "Redis",
-      icon: "fa-solid fa-r",
+      icon: "fa-solid fa-database",
       prefix: "redis/",
       collapsible: true,
       children: [
         {
-          text: "基础",
-          icon: "fa-solid fa-bars",
+          text: "核心概念",
+          icon: "fa-solid fa-layer-group",
           prefix: "basis/",
           children: [
             "dataInMemory",
           ],
         },
         {
-          text: "应用",
-          icon: "fa-solid fa-bars",
+          text: "实践应用",
+          icon: "fa-solid fa-gears",
           prefix: "application/",
           children: [
             "lock",
+          ],
+        },
+      ],
+    },
+    {
+      text: "Java",
+      icon: "fa-brands fa-java",
+      prefix: "java/",
+      collapsible: true,
+      children: [
+        {
+          text: "语言基础",
+          icon: "fa-solid fa-code",
+          prefix: "basis/",
+          children: [
+            "JavaBasics",
+          ],
+        },
+        {
+          text: "高级特性",
+          icon: "fa-solid fa-rocket",
+          prefix: "advanced/",
+          children: [
+            "Concurrency",
+          ],
+        },
+        {
+          text: "框架技术",
+          icon: "fa-solid fa-cubes",
+          prefix: "framework/",
+          children: [
+            "Spring",
+            "Servlet",
+            "Filter",
+            "Listener",
           ],
         },
       ],
