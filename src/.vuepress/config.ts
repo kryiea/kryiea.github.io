@@ -3,7 +3,7 @@ import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 
 export default defineUserConfig({
-  base: "/kryiea.github.io/",
+  base: "/",
 
   lang: "zh-CN",
   title: "🧐kryiea",
