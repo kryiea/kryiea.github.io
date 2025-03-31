@@ -1,6 +1,6 @@
 ---
 # 这是文章的标题
-title: redis实现分布式锁
+title: Redis锁机制详解
 # 你可以自定义封面图片
 cover: 
 # 这是页面的图标
@@ -10,13 +10,17 @@ order: 1
 # 设置作者
 author: 
 # 设置写作时间
-date: 2024-8-2
+date: 2024-01-01
 # 一个页面可以有多个分类
 category:
-  - redis
+  - 数据库
+  - Redis
 # 一个页面可以有多个标签
 tag:
-  - redis
+  - Redis
+  - 锁机制
+  - 并发控制
+  - 分布式系统
 # 此页面会在文章列表置顶
 sticky: false
 # 此页面会出现在星标文章中

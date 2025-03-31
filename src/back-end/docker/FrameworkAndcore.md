@@ -1,6 +1,6 @@
 ---
 # 这是文章的标题
-title: docker 框架与核心
+title: Docker框架与核心原理
 # 你可以自定义封面图片
 cover: 
 # 这是页面的图标
@@ -10,13 +10,18 @@ order: 1
 # 设置作者
 author: 
 # 设置写作时间
-date: 2024-11-29
+date: 2024-01-01
 # 一个页面可以有多个分类
 category:
-  - docker
+  - Docker
+  - 容器技术
+  - 系统架构
 # 一个页面可以有多个标签
 tag:
-  - docker
+  - Docker
+  - 容器架构
+  - 数据卷
+  - 系统设计
 # 此页面会在文章列表置顶
 sticky: false
 # 此页面会出现在星标文章中
@@ -101,7 +106,7 @@ dockerd
 
 dockerd 启动的时候， containerd 就随之启动了，dockerd 与 containerd 一直存在。
 
-当执行 `docker run` 命令（通过 busybox 镜像创建并启动容器）时，containerd 会创建 `containerd-shim` 充当 “垫片” 进程，然后启动容器的真正进程 sleep 3600 。
+当执行 `docker run` 命令（通过 busybox 镜像创建并启动容器）时，containerd 会创建 `containerd-shim` 充当 "垫片" 进程，然后启动容器的真正进程 sleep 3600 。
 
 ## 三、docker 数据管理
 
@@ -112,7 +117,7 @@ dockerd 启动的时候， containerd 就随之启动了，dockerd 与 container
 
 ### 3.1 数据卷
 
-数据卷是一个<u>可供一个或多个容器使用</u>的特殊目录，它绕过 UFS，可以提供很多有用的特性：
+数据卷是一个可供一个或多个容器使用 的特殊目录，它绕过 UFS，可以提供很多有用的特性：
 
 - 数据卷 可以在容器之间共享和重用。
 - 对 数据卷 的修改会立马生效。
@@ -181,7 +186,7 @@ docker run -d -P \
 
 本地目录的路径必须是绝对路径，以前使用 `-v` 参数时如果本地目录不存在 Docker 会自动为你创建一个文件夹，现在使用 `--mount ` 参数时如果本地目录不存在，Docker 会报错。
 
-Docker 挂载主机目录的<u>默认权限是读写</u> ，用户也可以通过增加 `readonly` 指定为 只读 。
+Docker 挂载主机目录的默认权限是读写 ，用户也可以通过增加 `readonly` 指定为 只读 。
 
 加了 `readonly` 之后，就挂载为只读了。如果你在容器内 /opt/webapp 目录新建文件，会显示如下错误
 
@@ -244,7 +249,7 @@ docker run -it --rm --name busybox2 --network my-net busybox sh
 
 #### 基础理论
 
-docker 使用 Linux 桥接网卡，在宿主机虚拟一个<u>docker 容器网桥</u><u>docker0</u>。
+docker 使用 Linux 桥接网卡，在宿主机虚拟一个docker 容器网桥docker0。
 
 docker 启动一个容器时会根据 docker 网桥的网段分配给容器一个 IP 地址，称为 `Container-IP`，同时 Docker 网桥是每个容器的默认网络网关。
 
@@ -311,7 +316,7 @@ host 模式相当于 Vmware 中的 NAT 模式，与宿主机在同一个网络�
 
 Container 网络模式没有改善容器与宿主机以外世界通信的情况(和桥接模式一样，不能连接宿主机以外的其他设备)。
 
-这个模式指定新创建的容器和已经存在的一个容器<u>共享一个 Network Namespace</u>，而不是和宿主机共享。
+这个模式指定新创建的容器和已经存在的一个容器共享一个 Network Namespace，而不是和宿主机共享。
 
 新创建的容器不会创建自己的网卡，配置自己的 IP，而是和一个指定的容器共享 IP、端口范围等。 同样，两个容器除了网络方面，其他的如文件系统、进程列表等还是隔离的。两个容器的进程可以通过 lo 网卡设备通信。
 

@@ -20,7 +20,6 @@ tag:
 每篇文章都以YAML格式的元数据开头，包含以下字段：
 - title: 文章标题
 - description: 简洁的文章描述
-- icon: 相关的图标
 - date: 发布日期
 - category: 文章分类
 - tag: 相关标签

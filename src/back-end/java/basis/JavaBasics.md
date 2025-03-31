@@ -1,5 +1,12 @@
 ---
 title: Java基础
+description: Java语言基础知识、语法特性和核心概念
+date: 2024-01-01
+category:
+  - Java
+tag:
+  - 基础语法
+  - 语言特性
 order: 1
 ---
 

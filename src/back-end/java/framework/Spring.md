@@ -1,8 +1,15 @@
 ---
 title: Spring框架
 order: 1
-# 这是页面的图标
-icon: 
+# 这是页面的分类
+category:
+  - Java
+  - 框架
+# 这是页面的标签
+tag:
+  - Spring
+  - 依赖注入
+  - AOP
 ---
 
 # Spring框架

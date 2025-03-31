@@ -1,6 +1,6 @@
 ---
 # 这是文章的标题
-title: docker 常用命令
+title: Docker常用命令详解
 # 你可以自定义封面图片
 cover: 
 # 这是页面的图标
@@ -10,14 +10,17 @@ order: 1
 # 设置作者
 author: 
 # 设置写作时间
-date: 2024-11-29
+date: 2024-01-01
 # 一个页面可以有多个分类
 category:
-  - docker
+  - Docker
+  - 容器技术
 # 一个页面可以有多个标签
 tag:
-  - docker
-  - 命令
+  - Docker
+  - 命令行
+  - 容器管理
+  - DevOps
 # 此页面会在文章列表置顶
 sticky: false
 # 此页面会出现在星标文章中
@@ -30,7 +33,7 @@ copyright:
 headerDepth: 5
 ---
 
-常用的docker命令。
+description: 详细介绍Docker的常用命令、容器操作及实用技巧
 
 <!-- more -->
 
