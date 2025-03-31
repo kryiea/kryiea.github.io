@@ -119,7 +119,8 @@ export default sidebar({
           icon: "fa-solid fa-rocket",
           prefix: "advanced/",
           children: [
-            "Concurrency",
+            "Reflection",
+            "Exception",
           ],
         },
         {

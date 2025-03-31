@@ -1,7 +1,6 @@
 ---
 title: Java基础
 order: 1
-icon: fa-java
 ---
 
 # Java基础
