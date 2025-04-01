@@ -2,6 +2,7 @@
 title: Go
 index: false
 icon: fa-brands fa-golang
+date: 2024-01-01
 ---
 
 # Go 系列

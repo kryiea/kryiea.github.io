@@ -2,6 +2,7 @@
 title: MySQL
 index: false
 icon: fa-solid fa-database
+date: 2024-01-01
 ---
 
 # MySQL 系列

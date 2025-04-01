@@ -2,6 +2,7 @@
 title: 算法
 index: false
 icon: fa-solid fa-code-branch
+date: 2024-01-01
 ---
 
 # 算法系列

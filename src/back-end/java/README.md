@@ -2,6 +2,7 @@
 title: Java
 index: false
 icon: fa-brands fa-java
+date: 2024-01-01
 ---
 
 # Java 系列
